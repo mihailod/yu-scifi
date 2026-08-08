@@ -1,0 +1,31 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Xcode - build output
+build/
+DerivedData/
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Xcode - user-specific state (window layout, breakpoints, per-user schemes)
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+
+# Xcode - injected at archive/export time
+*.mobileprovision
+*.provisionprofile
+
+# Swift Package Manager / CocoaPods / Carthage
+.build/
+Packages/
+Pods/
+Carthage/Build/
