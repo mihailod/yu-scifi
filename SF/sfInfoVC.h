@@ -7,23 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MessageUI/MessageUI.h>
-#import <Social/SLComposeViewController.h>
-#import <Social/SLServiceTypes.h>
 
 #import "sfUtil.h"
 #import "sfData.h"
 
-@interface sfInfoVC : UIViewController <MFMailComposeViewControllerDelegate>
+@interface sfInfoVC : UIViewController
 
 @property IBOutlet UILabel *titleLabel;
+@property IBOutlet UIImageView *iconView;
 
-- (IBAction)rate:(id)sender;
-- (IBAction)emailDeveloper:(id)sender;
-- (IBAction)emailFriend:(id)sender;
-- (IBAction)facebook:(id)sender;
-- (IBAction)twitter:(id)sender;
-- (IBAction)donate:(id)sender;
-
-    
 @end

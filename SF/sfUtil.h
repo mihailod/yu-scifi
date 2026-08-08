@@ -24,7 +24,6 @@
 + (NSString*)appName;
 + (NSString*)appVersion;
 + (NSString*)appNameAndVersion;
-+ (NSString*)appStoreUrl;
 + (NSString*)replaceSerbianLetters:(NSString*)s;
 
 @end

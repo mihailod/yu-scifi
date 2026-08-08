@@ -11,11 +11,6 @@
 #import "sfEdition.h"
 #import "sfUtil.h"
 
-#define APP_STORE_ID @"826648548"
-
-#define URL_PAYPAL @"https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=mihailod%40me%2ecom&lc=US&item_name=sfapp&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest"
-#define EMAIL_DEV @"mihailod@me.com"
-
 #define EDITION_OSTALO @"Ostalo"
 #define EDITION_TEORIJA @"Teorija"
 

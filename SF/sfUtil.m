@@ -41,11 +41,6 @@
     return [NSString stringWithFormat:@"%@ %@", [self appName], [self appVersion]];
 }
 
-+(NSString*)appStoreUrl
-{
-    return [NSString stringWithFormat:@"http://itunes.apple.com/app/id%@", APP_STORE_ID];
-}
-
 + (UITableViewCell *)makeBookCell:(NSIndexPath *)indexPath tableView:(UITableView *)tableView book:(sfBook *)book
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_REUSE_ID /*forIndexPath:indexPath*/];
