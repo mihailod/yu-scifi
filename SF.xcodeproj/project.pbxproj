@@ -30,7 +30,6 @@
 		1C30C676189E6FD1009B42E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C30C675189E6FD1009B42E2 /* main.m */; };
 		1C30C67A189E6FD1009B42E2 /* sfAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C30C679189E6FD1009B42E2 /* sfAppDelegate.m */; };
 		1C30C67D189E6FD1009B42E2 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C30C67B189E6FD1009B42E2 /* Main_iPhone.storyboard */; };
-		1CAA000000000000000000A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CAA000000000000000000A3 /* LaunchScreen.storyboard */; };
 		1C30C683189E6FD1009B42E2 /* sfFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C30C682189E6FD1009B42E2 /* sfFirstViewController.m */; };
 		1C30C686189E6FD1009B42E2 /* sfSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C30C685189E6FD1009B42E2 /* sfSecondViewController.m */; };
 		1C30C68F189E6FD1009B42E2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C30C68E189E6FD1009B42E2 /* XCTest.framework */; };
@@ -38,6 +37,7 @@
 		1C30C691189E6FD1009B42E2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C30C66D189E6FD1009B42E2 /* UIKit.framework */; };
 		1C30C699189E6FD1009B42E2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C30C697189E6FD1009B42E2 /* InfoPlist.strings */; };
 		1C30C69B189E6FD1009B42E2 /* SFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C30C69A189E6FD1009B42E2 /* SFTests.m */; };
+		1CAA000000000000000000A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CAA000000000000000000A3 /* LaunchScreen.storyboard */; };
 		1CD096DC189EA42E00B2EC65 /* sfData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD096DB189EA42E00B2EC65 /* sfData.m */; };
 		1CD12EE518B14FFD004E09F1 /* x100db.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1CD12EE418B14FFD004E09F1 /* x100db.txt */; };
 		1CD24D3B189EBEE300799822 /* sfBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD24D3A189EBEE300799822 /* sfBook.m */; };
@@ -94,7 +94,6 @@
 		1C30C678189E6FD1009B42E2 /* sfAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sfAppDelegate.h; sourceTree = "<group>"; };
 		1C30C679189E6FD1009B42E2 /* sfAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sfAppDelegate.m; sourceTree = "<group>"; };
 		1C30C67C189E6FD1009B42E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		1CAA000000000000000000A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C30C681189E6FD1009B42E2 /* sfFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sfFirstViewController.h; sourceTree = "<group>"; };
 		1C30C682189E6FD1009B42E2 /* sfFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sfFirstViewController.m; sourceTree = "<group>"; };
 		1C30C684189E6FD1009B42E2 /* sfSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sfSecondViewController.h; sourceTree = "<group>"; };
@@ -104,6 +103,7 @@
 		1C30C696189E6FD1009B42E2 /* SFTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SFTests-Info.plist"; sourceTree = "<group>"; };
 		1C30C698189E6FD1009B42E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1C30C69A189E6FD1009B42E2 /* SFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFTests.m; sourceTree = "<group>"; };
+		1CAA000000000000000000A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CD096DA189EA42E00B2EC65 /* sfData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sfData.h; sourceTree = "<group>"; };
 		1CD096DB189EA42E00B2EC65 /* sfData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sfData.m; sourceTree = "<group>"; };
 		1CD12EE418B14FFD004E09F1 /* x100db.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = x100db.txt; sourceTree = "<group>"; };
@@ -317,7 +317,7 @@
 			};
 			buildConfigurationList = 1C30C661189E6FD1009B42E2 /* Build configuration list for PBXProject "SF" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -430,20 +430,20 @@
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		1CAA000000000000000000A3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1CAA000000000000000000A2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		1C30C697189E6FD1009B42E2 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1C30C698189E6FD1009B42E2 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1CAA000000000000000000A3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CAA000000000000000000A2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -529,9 +529,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = MUYBB8YH5X;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SF/SF-Prefix.pch";
 				INFOPLIST_FILE = "SF/SF-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				PRODUCT_BUNDLE_IDENTIFIER = mihailod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -546,9 +548,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = MUYBB8YH5X;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SF/SF-Prefix.pch";
 				INFOPLIST_FILE = "SF/SF-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
 				PRODUCT_BUNDLE_IDENTIFIER = mihailod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
