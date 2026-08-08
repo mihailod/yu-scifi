@@ -22,6 +22,11 @@
 @property IBOutlet UIImageView *cro;
 @property IBOutlet UIImageView *slo;
 
+// Google, Wikipedia and the four marketplaces. Connection order is not
+// meaningful; the layout code sorts these by tag, which is also the index into
+// sfData's webSearchSyntax array.
+@property (nonatomic, strong) IBOutletCollection(UIButton) NSArray *linkButtons;
+
 - (IBAction) followWebLink:(id)sender;
 
 @property sfBook *book;
