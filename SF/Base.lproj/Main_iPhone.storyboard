@@ -333,6 +333,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Pretraga" id="1tB-pT-F2p"/>
                     <connections>
+                        <outlet property="searchBar" destination="oe8-dP-KWf" id="sbr-ou-001"/>
                         <outlet property="searchTableView" destination="r83-tk-O3C" id="hpS-pP-E6b"/>
                     </connections>
                 </viewController>

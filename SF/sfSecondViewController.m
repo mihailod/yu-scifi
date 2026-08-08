@@ -15,6 +15,7 @@
 
 @synthesize searchResults;
 @synthesize searchTableView;
+@synthesize searchBar;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,7 +29,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    // The storyboard pins the search bar at y=64, which sat just under the 2014
+    // navigation bar. Modern nav bars are taller, so it ended up behind one and
+    // could not be tapped at all. Pinned to the safe area instead; the table
+    // taking the safe-area bottom also keeps rows clear of the floating tab bar.
+    searchBar.translatesAutoresizingMaskIntoConstraints = NO;
+    searchTableView.translatesAutoresizingMaskIntoConstraints = NO;
+
+    UILayoutGuide *safe = self.view.safeAreaLayoutGuide;
+    [NSLayoutConstraint activateConstraints:@[
+        [searchBar.topAnchor constraintEqualToAnchor:safe.topAnchor],
+        [searchBar.leadingAnchor constraintEqualToAnchor:safe.leadingAnchor],
+        [searchBar.trailingAnchor constraintEqualToAnchor:safe.trailingAnchor],
+
+        [searchTableView.topAnchor constraintEqualToAnchor:searchBar.bottomAnchor],
+        [searchTableView.leadingAnchor constraintEqualToAnchor:safe.leadingAnchor],
+        [searchTableView.trailingAnchor constraintEqualToAnchor:safe.trailingAnchor],
+        [searchTableView.bottomAnchor constraintEqualToAnchor:safe.bottomAnchor],
+    ]];
 }
 
 - (void)didReceiveMemoryWarning

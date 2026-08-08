@@ -15,5 +15,6 @@
 
 @property (strong, nonatomic) NSArray *searchResults;
 @property (strong, nonatomic) IBOutlet UITableView *searchTableView;
+@property (strong, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
