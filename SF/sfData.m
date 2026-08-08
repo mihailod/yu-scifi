@@ -33,10 +33,12 @@
     webSearchSyntax = [NSArray arrayWithObjects:
                        @"https://www.google.com/search?q=",
                        @"https://en.m.wikipedia.org/wiki/Special:Search?search=",
+                       @"https://www.goodreads.com/search?q=",
                        @"https://www.limundo.com/pretraga?txtPretraga=",
                        @"https://www.kupindo.com/pretraga.php?bSearchBox=1&Pretraga=",
                        @"https://www.njuskalo.hr/search/?keywords=",
                        @"https://www.bolha.com/search/?keywords=",
+                       @"https://olx.ba/pretraga?q=",
                        nil];
     
     return self;

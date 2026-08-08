@@ -21,6 +21,7 @@
 + (void)addImageToBeTheSameSize:(sfBook *)b cell:(UITableViewCell *)cell;
 + (void)addCustomYearLabel:(UITableViewCell *)cell book:(sfBook *)b;
 + (NSString*)makeWebLink:(int)tag book:(sfBook *)book webSearchSyntax:(NSArray*)webSearchSyntax;
++ (NSString*)makeWebLink:(int)tag keyword:(NSString *)keyword webSearchSyntax:(NSArray*)webSearchSyntax;
 // The 2014 storyboard hard-codes white backgrounds and darkTextColor throughout,
 // which ignores the system appearance. Walks a view tree swapping those for the
 // semantic equivalents so the app follows Light/Dark. Images, and any view whose

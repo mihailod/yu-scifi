@@ -94,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" rowHeight="71" reuseIdentifier="ProtoUnused" id="klJ-8U-RqY">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ProtoUnused" rowHeight="71" id="klJ-8U-RqY">
                                 <rect key="frame" x="0.0" y="50" width="393" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="klJ-8U-RqY" id="Cb6-zY-JGH">
@@ -198,7 +198,15 @@
                                     <action selector="followWebLink:" destination="KfG-ox-Tw2" eventType="touchUpInside" id="Oi9-i1-qZB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iJ-Xg-rHF">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDR-bt-001">
+                                <rect key="frame" x="196" y="136" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Goodreads"/>
+                                <connections>
+                                    <action selector="followWebLink:" destination="KfG-ox-Tw2" eventType="touchUpInside" id="GDR-ac-001"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iJ-Xg-rHF">
                                 <rect key="frame" x="240" y="183" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Limundo">
@@ -208,7 +216,7 @@
                                     <action selector="followWebLink:" destination="KfG-ox-Tw2" eventType="touchUpInside" id="1HB-ey-eRZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzj-zG-cbT">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzj-zG-cbT">
                                 <rect key="frame" x="240" y="214" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Kupindo">
@@ -218,7 +226,7 @@
                                     <action selector="followWebLink:" destination="KfG-ox-Tw2" eventType="touchUpInside" id="J5m-Vh-iWa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xf3-GX-k70">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xf3-GX-k70">
                                 <rect key="frame" x="240" y="247" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Njuškalo">
@@ -228,7 +236,7 @@
                                     <action selector="followWebLink:" destination="KfG-ox-Tw2" eventType="touchUpInside" id="KKq-2Q-Ogb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVI-0W-eUq">
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVI-0W-eUq">
                                 <rect key="frame" x="240" y="280" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Bolha">
@@ -236,6 +244,14 @@
                                 </state>
                                 <connections>
                                     <action selector="followWebLink:" destination="KfG-ox-Tw2" eventType="touchUpInside" id="AxI-QI-x0D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLX-bt-001">
+                                <rect key="frame" x="240" y="313" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pik/olx"/>
+                                <connections>
+                                    <action selector="followWebLink:" destination="KfG-ox-Tw2" eventType="touchUpInside" id="OLX-ac-001"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ser" translatesAutoresizingMaskIntoConstraints="NO" id="1wG-Zc-hIJ">
@@ -266,11 +282,19 @@
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bih" translatesAutoresizingMaskIntoConstraints="NO" id="BIH-iv-001">
+                                <rect key="frame" x="202" y="320" width="30" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="1cK-s6-UMq"/>
                     <connections>
+                        <outlet property="bih" destination="BIH-iv-001" id="bih-ou-001"/>
                         <outlet property="cro" destination="gOa-tm-pRt" id="qDI-nD-ALK"/>
                         <outlet property="imageView" destination="TfY-jC-oQf" id="WC2-fk-pQ6"/>
                         <outlet property="ser" destination="1wG-Zc-hIJ" id="YWf-Xp-Tcb"/>
@@ -279,10 +303,12 @@
                         <outlet property="textView" destination="PzR-ih-gV8" id="tHN-jh-Ip8"/>
                         <outletCollection property="linkButtons" destination="5uh-rA-UPk" id="lkb-00-000"/>
                         <outletCollection property="linkButtons" destination="xIa-Tv-Dfb" id="lkb-00-001"/>
+                        <outletCollection property="linkButtons" destination="GDR-bt-001" id="lkb-00-006"/>
                         <outletCollection property="linkButtons" destination="3iJ-Xg-rHF" id="lkb-00-002"/>
                         <outletCollection property="linkButtons" destination="zzj-zG-cbT" id="lkb-00-003"/>
                         <outletCollection property="linkButtons" destination="xf3-GX-k70" id="lkb-00-004"/>
                         <outletCollection property="linkButtons" destination="QVI-0W-eUq" id="lkb-00-005"/>
+                        <outletCollection property="linkButtons" destination="OLX-bt-001" id="lkb-00-007"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09X-TG-mgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -314,7 +340,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="70" reuseIdentifier="ProtoUnused" id="WXL-YN-19b">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ProtoUnused" rowHeight="70" id="WXL-YN-19b">
                                         <rect key="frame" x="0.0" y="50" width="393" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WXL-YN-19b" id="00o-tS-dW7">
@@ -466,6 +492,7 @@
     <resources>
         <image name="about" width="25" height="25"/>
         <image name="appicon" width="128" height="128"/>
+        <image name="bih" width="100" height="50"/>
         <image name="browse" width="25" height="25"/>
         <image name="cro" width="100" height="50"/>
         <image name="search" width="25" height="25"/>

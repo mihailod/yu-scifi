@@ -23,6 +23,7 @@
 @synthesize ser1;
 @synthesize cro;
 @synthesize slo;
+@synthesize bih;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,10 +43,10 @@
     // CGColor does not re-resolve when the appearance changes. 50% grey holds an
     // outline against both a white and a dark backdrop.
     CGColorRef flagBorder = [UIColor colorWithWhite:0.5f alpha:1.0f].CGColor;
-    [ser.layer  setBorderColor:flagBorder]; [ser.layer  setBorderWidth:0.5];
-    [ser1.layer setBorderColor:flagBorder]; [ser1.layer setBorderWidth:0.5];
-    [cro.layer  setBorderColor:flagBorder]; [cro.layer  setBorderWidth:0.5];
-    [slo.layer  setBorderColor:flagBorder]; [slo.layer  setBorderWidth:0.5];
+    for (UIImageView *flag in [self orderedFlags]) {
+        [flag.layer setBorderColor:flagBorder];
+        [flag.layer setBorderWidth:0.5];
+    }
 
     [sfUtil applyAdaptiveColors:self.view];
     textView.font = [UIFont boldSystemFontOfSize:20.0f];
@@ -67,31 +68,64 @@
 // to grow with the view while the link buttons were pinned, so on any screen
 // wider than 320pt the cover expanded right and covered them. Rebuilt here
 // against the safe area so the two columns keep their relationship at any size.
+// Flags in marketplace tag order: Limundo and Kupindo are Serbian, Njuskalo
+// Croatian, Bolha Slovenian, Pik/olx Bosnian.
+- (NSArray *)orderedFlags
+{
+    return @[ser, ser1, cro, slo, bih];
+}
+
 - (void)buildAdaptiveLayout
 {
     NSArray *btns = [self.linkButtons sortedArrayUsingComparator:^NSComparisonResult(UIButton *a, UIButton *b) {
         return [@(a.tag) compare:@(b.tag)];
     }];
-    if (btns.count != 6) { return; }   // storyboard changed -- leave the nib layout alone
+    NSArray *flags = [self orderedFlags];
 
-    NSArray *flags = @[ser, ser1, cro, slo];
+    // Tags below LIMUNDO are the plain reference links (Google, Wikipedia,
+    // Goodreads); from LIMUNDO on, each link is paired with a country flag.
+    // Deriving both counts from the tags keeps this correct if a link is added.
+    NSUInteger plainCount = LIMUNDO;
+    if (btns.count != plainCount + flags.count) { return; }   // storyboard changed -- leave the nib layout alone
 
-    NSMutableArray *rows = [NSMutableArray arrayWithObjects:btns[0], btns[1], nil];
+    const CGFloat kRowHeight    = 30.0f;   // every row, so gaps read evenly
+    const CGFloat kRowSpacing   = 10.0f;   // between rows inside a group
+    const CGFloat kGroupSpacing = 26.0f;   // between the two groups
+
+    NSMutableArray *referenceRows = [NSMutableArray array];
+    for (NSUInteger i = 0; i < plainCount; i++) { [referenceRows addObject:btns[i]]; }
+
+    NSMutableArray *marketRows = [NSMutableArray array];
     for (NSUInteger i = 0; i < flags.count; i++) {
         UIImageView *flag = flags[i];
         [flag.widthAnchor constraintEqualToConstant:30].active = YES;
         [flag.heightAnchor constraintEqualToConstant:15].active = YES;
-        UIStackView *row = [[UIStackView alloc] initWithArrangedSubviews:@[flag, btns[i + 2]]];
+        UIStackView *row = [[UIStackView alloc] initWithArrangedSubviews:@[flag, btns[plainCount + i]]];
         row.axis = UILayoutConstraintAxisHorizontal;
         row.alignment = UIStackViewAlignmentCenter;
         row.spacing = 8;
-        [rows addObject:row];
+        [marketRows addObject:row];
     }
 
-    UIStackView *links = [[UIStackView alloc] initWithArrangedSubviews:rows];
+    // A bare UIButton and a flag+button row do not have the same intrinsic
+    // height, so a single stack with uniform spacing still looked ragged.
+    // Pinning every row to one height makes the spacing uniform by construction.
+    for (UIView *row in [referenceRows arrayByAddingObjectsFromArray:marketRows]) {
+        [row.heightAnchor constraintEqualToConstant:kRowHeight].active = YES;
+    }
+
+    UIStackView *referenceGroup = [[UIStackView alloc] initWithArrangedSubviews:referenceRows];
+    UIStackView *marketGroup    = [[UIStackView alloc] initWithArrangedSubviews:marketRows];
+    for (UIStackView *group in @[referenceGroup, marketGroup]) {
+        group.axis = UILayoutConstraintAxisVertical;
+        group.alignment = UIStackViewAlignmentLeading;
+        group.spacing = kRowSpacing;
+    }
+
+    UIStackView *links = [[UIStackView alloc] initWithArrangedSubviews:@[referenceGroup, marketGroup]];
     links.axis = UILayoutConstraintAxisVertical;
     links.alignment = UIStackViewAlignmentLeading;
-    links.spacing = 8;
+    links.spacing = kGroupSpacing;
     links.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:links];
 
@@ -100,15 +134,22 @@
 
     UILayoutGuide *safe = self.view.safeAreaLayoutGuide;
 
-    // Cover keeps a book-ish 1:1.45 ratio at a fixed fraction of the width.
+    // Let the link column shrink to the width of its longest label rather than
+    // taking a fixed share, so whatever is left over goes to the cover. Without
+    // this the column kept a slab of empty space to the right of "Njuskalo".
+    [links setContentHuggingPriority:999 forAxis:UILayoutConstraintAxisHorizontal];
+    [links setContentCompressionResistancePriority:UILayoutPriorityRequired
+                                           forAxis:UILayoutConstraintAxisHorizontal];
+
+    // Cover spans from the leading margin to the link column, keeping a book-ish
+    // 1:1.45 ratio, so its width is whatever the links do not need.
     [NSLayoutConstraint activateConstraints:@[
-        [imageView.leadingAnchor constraintEqualToAnchor:safe.leadingAnchor constant:16],
+        [imageView.leadingAnchor constraintEqualToAnchor:safe.leadingAnchor constant:12],
         [imageView.topAnchor constraintEqualToAnchor:safe.topAnchor constant:12],
-        [imageView.widthAnchor constraintEqualToAnchor:safe.widthAnchor multiplier:0.44],
+        [imageView.trailingAnchor constraintEqualToAnchor:links.leadingAnchor constant:-12],
         [imageView.heightAnchor constraintEqualToAnchor:imageView.widthAnchor multiplier:1.45],
 
-        [links.leadingAnchor constraintEqualToAnchor:imageView.trailingAnchor constant:16],
-        [links.trailingAnchor constraintLessThanOrEqualToAnchor:safe.trailingAnchor constant:-16],
+        [links.trailingAnchor constraintEqualToAnchor:safe.trailingAnchor constant:-12],
         [links.topAnchor constraintEqualToAnchor:imageView.topAnchor],
 
         [textView.leadingAnchor constraintEqualToAnchor:safe.leadingAnchor constant:12],
@@ -168,8 +209,58 @@
 // interstitial. It also sidesteps ATS and gives us Reader/Share for free.
 - (IBAction) followWebLink:(id)sender;
 {
+    int tag = (int)[sender tag];
+
+    // Goodreads carries reviews under both the original and the translated
+    // title, and they are usually different sets of readers, so let the user
+    // choose rather than picking for them. Only worth asking when we actually
+    // hold two distinct titles.
+    if (tag == GOODREADS && book.title.length > 0 && book.naslov.length > 0
+        && ![book.title isEqualToString:book.naslov]) {
+        UIAlertController *sheet =
+            [UIAlertController alertControllerWithTitle:@"Goodreads"
+                                                message:@"Traži po naslovu:"
+                                         preferredStyle:UIAlertControllerStyleActionSheet];
+
+        __weak typeof(self) weakSelf = self;
+        NSString *original = book.title;
+        NSString *translated = book.naslov;
+
+        [sheet addAction:[UIAlertAction actionWithTitle:original
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction *a) {
+            [weakSelf openWebLinkForTag:GOODREADS keyword:original];
+        }]];
+        [sheet addAction:[UIAlertAction actionWithTitle:translated
+                                                  style:UIAlertActionStyleDefault
+                                                handler:^(UIAlertAction *a) {
+            [weakSelf openWebLinkForTag:GOODREADS keyword:translated];
+        }]];
+        [sheet addAction:[UIAlertAction actionWithTitle:@"Otkaži"
+                                                  style:UIAlertActionStyleCancel
+                                                handler:nil]];
+
+        // Required if this ever runs in a regular size class, where an action
+        // sheet is presented as a popover and needs an anchor.
+        sheet.popoverPresentationController.sourceView = (UIView *)sender;
+        sheet.popoverPresentationController.sourceRect = ((UIView *)sender).bounds;
+
+        [self presentViewController:sheet animated:YES completion:nil];
+        return;
+    }
+
+    [self openWebLinkForTag:tag keyword:nil];
+}
+
+// keyword nil means "use the default original/translated rule for this tag".
+- (void)openWebLinkForTag:(int)tag keyword:(NSString *)keyword
+{
     sfAppDelegate *appDelegate = (sfAppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSString *urlString = [sfUtil makeWebLink:(int)[sender tag] book:book webSearchSyntax:[[appDelegate data] webSearchSyntax]];
+    NSArray *syntax = [[appDelegate data] webSearchSyntax];
+    NSString *urlString = keyword.length > 0
+        ? [sfUtil makeWebLink:tag keyword:keyword webSearchSyntax:syntax]
+        : [sfUtil makeWebLink:tag book:book webSearchSyntax:syntax];
+
     NSURL *url = [NSURL URLWithString:urlString];
     if (url == nil) { return; }
     SFSafariViewController *sfvc = [[SFSafariViewController alloc] initWithURL:url];

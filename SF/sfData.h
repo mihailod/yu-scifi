@@ -14,12 +14,16 @@
 #define EDITION_OSTALO @"Ostalo"
 #define EDITION_TEORIJA @"Teorija"
 
+// These are button tags in the storyboard as well as indices into
+// webSearchSyntax -- the two must stay in step.
 #define GOOGLE 0
 #define WIKIPEDIA 1
-#define LIMUNDO 2
-#define KUPINDO 3
-#define NJUSKALO 4
-#define BOLHA 5
+#define GOODREADS 2
+#define LIMUNDO 3
+#define KUPINDO 4
+#define NJUSKALO 5
+#define BOLHA 6
+#define OLX 7
 
 @interface sfData : NSObject
 

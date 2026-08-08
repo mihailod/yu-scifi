@@ -21,6 +21,7 @@
 @property IBOutlet UIImageView *ser1;
 @property IBOutlet UIImageView *cro;
 @property IBOutlet UIImageView *slo;
+@property IBOutlet UIImageView *bih;
 
 // Google, Wikipedia and the four marketplaces. Connection order is not
 // meaningful; the layout code sorts these by tag, which is also the index into
