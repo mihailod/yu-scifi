@@ -5,13 +5,17 @@
       "scale" : "1x"
     },
     {
+      "filename" : "eon.png",
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "eon.png"
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }
