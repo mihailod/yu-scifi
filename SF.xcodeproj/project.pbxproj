@@ -31,7 +31,6 @@
 		1C30C67A189E6FD1009B42E2 /* sfAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C30C679189E6FD1009B42E2 /* sfAppDelegate.m */; };
 		1C30C67D189E6FD1009B42E2 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C30C67B189E6FD1009B42E2 /* Main_iPhone.storyboard */; };
 		1CAA000000000000000000A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CAA000000000000000000A3 /* LaunchScreen.storyboard */; };
-		1C30C680189E6FD1009B42E2 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C30C67E189E6FD1009B42E2 /* Main_iPad.storyboard */; };
 		1C30C683189E6FD1009B42E2 /* sfFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C30C682189E6FD1009B42E2 /* sfFirstViewController.m */; };
 		1C30C686189E6FD1009B42E2 /* sfSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C30C685189E6FD1009B42E2 /* sfSecondViewController.m */; };
 		1C30C68F189E6FD1009B42E2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C30C68E189E6FD1009B42E2 /* XCTest.framework */; };
@@ -96,7 +95,6 @@
 		1C30C679189E6FD1009B42E2 /* sfAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sfAppDelegate.m; sourceTree = "<group>"; };
 		1C30C67C189E6FD1009B42E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		1CAA000000000000000000A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1C30C67F189E6FD1009B42E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		1C30C681189E6FD1009B42E2 /* sfFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sfFirstViewController.h; sourceTree = "<group>"; };
 		1C30C682189E6FD1009B42E2 /* sfFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sfFirstViewController.m; sourceTree = "<group>"; };
 		1C30C684189E6FD1009B42E2 /* sfSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sfSecondViewController.h; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 			children = (
 				1C30C67B189E6FD1009B42E2 /* Main_iPhone.storyboard */,
 				1CAA000000000000000000A3 /* LaunchScreen.storyboard */,
-				1C30C67E189E6FD1009B42E2 /* Main_iPad.storyboard */,
 				1C306EDD18A3AAF0005B729D /* sfEdition.h */,
 				1C306EDE18A3AAF0005B729D /* sfEdition.m */,
 				1CD24D39189EBEE300799822 /* sfBook.h */,
@@ -345,7 +342,6 @@
 				1C306EE718A6021A005B729D /* zvezdanestazedb.txt in Resources */,
 				1C306EDA18A2CF78005B729D /* malipolarisdb.txt in Resources */,
 				1CD24D4618A0E07800799822 /* kentaurdb.txt in Resources */,
-				1C30C680189E6FD1009B42E2 /* Main_iPad.storyboard in Resources */,
 				1C306EE518A4E0CD005B729D /* azdb.txt in Resources */,
 				1C1C603C18B3CB8C00F3F3B8 /* plavapticadb.txt in Resources */,
 				1C1C604118B9E08300F3F3B8 /* raspustdb.txt in Resources */,
@@ -442,14 +438,6 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		1C30C67E189E6FD1009B42E2 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1C30C67F189E6FD1009B42E2 /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		1C30C697189E6FD1009B42E2 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -544,6 +532,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SF/SF-Prefix.pch";
 				INFOPLIST_FILE = "SF/SF-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = mihailod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -560,6 +549,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SF/SF-Prefix.pch";
 				INFOPLIST_FILE = "SF/SF-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = mihailod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
