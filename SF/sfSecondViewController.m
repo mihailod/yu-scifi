@@ -48,6 +48,8 @@
         [searchTableView.trailingAnchor constraintEqualToAnchor:safe.trailingAnchor],
         [searchTableView.bottomAnchor constraintEqualToAnchor:safe.bottomAnchor],
     ]];
+
+    [sfUtil applyAdaptiveColors:self.view];
 }
 
 - (void)didReceiveMemoryWarning

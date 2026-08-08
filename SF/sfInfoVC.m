@@ -21,6 +21,7 @@
 {
     [super viewDidLoad];
     titleLabel.text = [sfUtil appNameAndVersion];
+    [sfUtil applyAdaptiveColors:self.view];
 }
 
 - (void)viewDidLayoutSubviews

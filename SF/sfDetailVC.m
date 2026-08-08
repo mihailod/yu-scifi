@@ -38,15 +38,16 @@
     [super viewDidLoad];
     [imageView setImage:[book image]];
     [textView setText:[self formatDetailText]];
-    [ser.layer setBorderColor:  [[UIColor blackColor] CGColor]]; [ser.layer  setBorderWidth: 0.5];
-    [ser1.layer setBorderColor: [[UIColor blackColor] CGColor]]; [ser1.layer setBorderWidth: 0.5];
-    [cro.layer setBorderColor:  [[UIColor blackColor] CGColor]]; [cro.layer  setBorderWidth: 0.5];
-    [slo.layer setBorderColor:  [[UIColor blackColor] CGColor]]; [slo.layer  setBorderWidth: 0.5];
+    // Fixed mid grey rather than separatorColor: this is a CALayer border, and
+    // CGColor does not re-resolve when the appearance changes. 50% grey holds an
+    // outline against both a white and a dark backdrop.
+    CGColorRef flagBorder = [UIColor colorWithWhite:0.5f alpha:1.0f].CGColor;
+    [ser.layer  setBorderColor:flagBorder]; [ser.layer  setBorderWidth:0.5];
+    [ser1.layer setBorderColor:flagBorder]; [ser1.layer setBorderWidth:0.5];
+    [cro.layer  setBorderColor:flagBorder]; [cro.layer  setBorderWidth:0.5];
+    [slo.layer  setBorderColor:flagBorder]; [slo.layer  setBorderWidth:0.5];
 
-    // The text view's background is hard-coded white in the storyboard, so pin
-    // the colour too -- the inherited default is labelColor, which turns white
-    // in dark mode and would leave white text on white.
-    textView.textColor = [UIColor blackColor];
+    [sfUtil applyAdaptiveColors:self.view];
     textView.font = [UIFont boldSystemFontOfSize:20.0f];
 
     for (UIButton *b in self.linkButtons) {

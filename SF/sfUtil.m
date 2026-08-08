@@ -18,6 +18,50 @@
 
 @implementation sfUtil
 
+// A colour counts as "hard-coded light" if it is opaque and near-white. Matching
+// on the value rather than the view class means the storyboard's mix of
+// calibratedWhite and calibratedRGB whites is all caught by one rule.
+static BOOL sfIsOpaqueNearWhite(UIColor *c)
+{
+    if (c == nil) { return NO; }
+    CGFloat r = 0, g = 0, b = 0, a = 0;
+    if (![c getRed:&r green:&g blue:&b alpha:&a]) { return NO; }
+    return (a > 0.99f && r > 0.95f && g > 0.95f && b > 0.95f);
+}
+
++ (void)applyAdaptiveColors:(UIView *)root
+{
+    if (root == nil) { return; }
+
+    // Tagged views are the deliberately-coloured ones (year badge over cover art)
+    // and must keep their own contrast independent of appearance.
+    if (root.tag == TAG_YEAR_LABEL || root.tag == TAG_IMAGE) { return; }
+
+    if ([root isKindOfClass:[UIImageView class]]) { return; }
+
+    if (sfIsOpaqueNearWhite(root.backgroundColor)) {
+        root.backgroundColor = [UIColor systemBackgroundColor];
+    }
+
+    if ([root isKindOfClass:[UILabel class]]) {
+        UILabel *l = (UILabel *)root;
+        // darkTextColor is a fixed black; labelColor is the adaptive counterpart.
+        if ([l.textColor isEqual:[UIColor darkTextColor]] || [l.textColor isEqual:[UIColor blackColor]]) {
+            l.textColor = [UIColor labelColor];
+        }
+    }
+
+    if ([root isKindOfClass:[UITextView class]]) {
+        UITextView *t = (UITextView *)root;
+        t.backgroundColor = [UIColor clearColor];
+        t.textColor = [UIColor labelColor];
+    }
+
+    for (UIView *sub in root.subviews) {
+        [self applyAdaptiveColors:sub];
+    }
+}
+
 +(NSString*)appName
 {
     //return @"Wikipanion";
