@@ -1,0 +1,18 @@
+
+
+Programming:
+
+
+- performance testing / progress bar / lazy loading if needed
+
+- checkboxes for collectors
+
+- colors!?
+
+- better search?
+
+Content:
+
+- nagrade?!
+
+

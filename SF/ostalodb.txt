@@ -1,0 +1,23 @@
+Solaris|Solaris|Stanislav Lem|Stanislaw Lem|1961|1972|solarisbigz|Petar Vujičić|BIGZ, 'Džepna knjiga' 15|
+Pseće srce (Zapisi mladog lekara)|Записок юного врача|Mihail Bulgakov|Михаил Афанасьевич Булгаков|1925-1926|1972|psecesrce|Dajić Putnik|BIGZ, 'Džepna knjiga' 22|
+Klanica pet|Slaughterhouse-Five|Kurt Vonegat|Kurt Jr Vonnegut|1969|1973||Branko Vučićević|BIGZ, fest romani 10|
+Paklena pomorandža|A Clockwork Orange|Antoni Bardžis|Anthony Burgess|1962|1973||Zoran Živković|BIGZ, 'Fest romani' 11|
+Odiseja u svemiru 2001|2001: A Space Odyssey|Artur Klark|Arhur C. Clarke|1968|1975|2001bigz|Zoran Živković|BIGZ, fest romani 13|
+Rat ljudi i daždevnjaka|Valka s mloky|Karel Čapek|Karel Čapek|1936|1975||Slobodanka Urošević, Dragutin Mirković|BIGZ, 'Džepna knjiga', naucna fantastika|
+YU SIRIUS|Prva zbirka jugoslavenskog SF-a|Borivoj Jurković (urednik)||-|1978|yusirius||Vjesnik, Zagreb (posebno izdanje mjesečnika SIRIUS)|
+Zvezdani ratovi|Star Wars: From the Adventures of Luke Skywalker|Alan Din Foster (kao Džordž Lukas)|Alan Dean Foster (aka George Lucas)|1976|1978||Nada Jovanović|Biblioteka 'Minotaur', Zvezdani ratovi 4|Star Wars
+1984|Nineteen Eighty-Four|Džordž Orvel|George Orwell|1949|1984|1984bigz|Vlada Stojiljković|BIGZ, 'Džepna knjiga', beletristika|
+Životinjska farma|Animal Farm|Džordž Orvel|George Orwell|1945|1985||Vladimir Roksandić|BIGZ, 'Džepna knjiga', beletristika|
+Besnilo||Borislav Pekić||1983|1986|||BIGZ, 'Džepna knjiga', beletristika|
+To Knjiga I|It|Stiven King|Stephen King|1986|1991|to1|Goran Skrobonja|Košmar|
+To Knjiga II|It|Stiven King|Stephen King|1986|1991|to2|Goran Skrobonja|Košmar|
+Silmarilion|Silmarillion|J.R.R. Tolkin (Kristofer Tolkin)|J.R.R. Tolkien (Christopher Tolkien)|1977|1993|silmarilion|Dubravka Popadić-Grebenarović|Esotheria|
+Mali deo neba||Miloš Stanojević||1996|1996|||Miloš Stanojević|
+3001: Konačna odiseja|3001: The Final Odyssey|Artur Klark|Arthur C. Clarke|1997|1997|3001|Zoran Živković|Stubovi kulture, Odiseja u svemiru 5|Space Odyssey
+#Rat ljudi i daždevnjaka|Valka s mloky|Karel Čapek|Karel Čapek|1936|2004|ratljudiidazdevnjaka|Slobodanka Urošević, Dragutin Mirković|Algoritam|
+#Esherove petlje||Zoran Živković||2008|2008|esherovepetlje||Geopoetika|
+#Pisac u najam||Zoran Živković||2009|2009|pisacunajam||Paideia|
+
+
+
+

@@ -1,0 +1,87 @@
+//
+//  sfSearchViewController.m
+//
+//  Created by Mihailo Despotovic on 2/2/14.
+//  Copyright (c) 2014 MiRteh. All rights reserved.
+//
+
+#import "sfSecondViewController.h"
+
+@interface sfSecondViewController ()
+
+@end
+
+@implementation sfSecondViewController
+
+@synthesize searchResults;
+@synthesize searchTableView;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+# pragma search delegate
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText { [self refreshSearch:searchText]; }
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar { [searchBar resignFirstResponder]; }
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+    NSString *text = [searchBar text];
+    [self refreshSearch:text];
+}
+
+- (void)refreshSearch:(NSString *)text {
+    sfAppDelegate *appDelegate = (sfAppDelegate *)[[UIApplication sharedApplication] delegate];
+    searchResults = [[appDelegate data] search:text];
+    [searchTableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+}
+
+# pragma table view
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView { return 1; }
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section { return searchResults.count; }
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    sfBook *book = searchResults[indexPath.row];
+    return [sfUtil makeBookCell:indexPath tableView:tableView book:book];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"SearchToDetail" sender:nil];
+}
+
+# pragma segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *indexPath = [self.searchTableView indexPathForSelectedRow];
+    long row = indexPath.row;
+    sfBook *b = searchResults[row];
+    [[segue destinationViewController] setTitle:b.naslov];
+    sfDetailVC *detailVC = (sfDetailVC*)[segue destinationViewController];
+    detailVC.book = b;
+}
+
+@end
+

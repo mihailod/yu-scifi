@@ -1,0 +1,65 @@
+Rat svetova|The War of the Worlds|Herbert Džordž Vels|Herbert George Wells|1897|1938|ratsvetova1938|V. Dedijer|Stara plava ptica 1|
+Vatra|La Guerre du feu|Roni stariji|J.-H. Rosny aîné|1911|1938|vatra1938|Miloš Stevanović|Stara plava ptica 5|
+Iščezli svet|The Lost World|Artur Konan Dojl|Arthur Conan Doyle|1912|1939||Radmila Todorović|Stara plava ptica 17|
+Karik i Valja|-?-|Jan Lari|Jan Larri|-?-|1940||Mihail Šile|Plava ptica 23|
+Džinovski lav|Le felin geant|Roni stariji|J.-H. Rosny aîné|1918|1940||P. D. Stojaković|Stara plava ptica 24|
+Amfibija|Человек-амфибия|Aleksandar Beljajev|Александр Романович Беляев|1928|1941||-?-|Stara plava ptica 29|
+Iznenadjenja XXI veka|-?-|Emilio Salgari|Emilio Salgari|-?-|1942||-?-|Stara plava ptica 31|
+Tajne okeana I|Тайна двух океанов|Grigorij Adamov|Григорий Борисович Адамов|1938|1943||-?-|Stara plava ptica 34|
+Tajne okeana II|Тайна двух океанов|Grigorij Adamov|Григорий Борисович Адамов|1938|1943||-?-|Stara plava ptica 34|
+
+Rat svetova|The War of the World|Herbert Džordž Vels|Herbert George Wells|1897|1981|ratsvetova1|V. Dedijer|Plava ptica 1|
+Vatra|La Guerre du feu|Roni stariji|J.-H. Rosny aîné|1911|1981|vatra1|Miloš Stevanović|Plava ptica 5|
+Iščezli svet|The Lost World|Artur Konan Dojl|Arthur Conan Doyle|1912|1980|iscezlisvet1|Radmila Todorović|Stara plava ptica 17|
+Karik i Valja|-?-|Jan Lari|-?-|-?-|1979|karikivalja1|Mihail Šile|Plava ptica 23|
+Džinovski lav|Le felin geant|Roni stariji|J.-H. Rosny aîné|1918|1979|dzinovskilav1|P. D. Stojaković|Plava ptica 24|
+Amfibija|Человек-амфибия|Aleksandar Beljajev|Александр Романович Беляев|1928|1979|amfibija1|-?-|Plava ptica 29|
+Rudnici cara Solomona|King Solomons’s Mines|Rajder Hagard|Henry Rider Haggard|1885|1977||Mihailo Djordjević|Plava ptica 32|
+Elrik od Melnibonea|Elric of Melniboné|Majkl Murkok|Michael Moorcock|1972|1978||Mirjana Matarić|Plava ptica 37, Elrik 1|The Elric Sequence
+Zvezdani ratovi|Star Wars: From the Adventures of Luke Skywalker|Alan Din Foster (kao Džordž Lukas)|Alan Dean Foster (aka George Lucas)|1976|1978|zvezdaniratovipp|Nada Jovanović|Plava ptica 41, Zvezdani ratovi 4|Star Wars
+Frankestajn|Frankenstein; or, The Modern Prometheus|Meri Šeli|Mary Shelley|1818|1978||Slavka Stevović|Plava ptica 43|
+Mač od Šanare I|The Sword of Shannara|Teri Bruks|Terry Brooks|1977|1979||Gordana Janković|Plava ptica 47|
+Mač od Šanare II|The Sword of Shannara|Teri Bruks|Terry Brooks|1977|1979||Gordana Janković|Plava ptica 48|
+Mač od Šanare III|The Sword of Shannara|Teri Bruks|Terry Brooks|1977|1979||Gordana Janković|Plava ptica 49|
+Kapije vremena|A Wrinkle in Time|Madlen Langl|Madeleine L’Engle|1962|1979||Ljiljana Stanić|Plava ptica 51|
+Mornar na moru sudbine|The Sailor on the Seas of Fate|Majkl Murkok|Michael Moorcock|1976|1979||Mirjana Matarić-Radovanov|Plava ptica 54, Elrik 2|The Elric Sequence
+Svemirski brod Galaktika|Battlestar Galactica|Glen Larson, Robert Terston|Glen Larson, Robert Thurston|1978|1980||Predrag Urošević|Plava ptica 61|
+Marijana moje mladosti|Schmerzliches Arkadien|Peter de Mendelson|Peter de Mendelssohn|1932|1980||Ivan Binder|Plava ptica 62|
+Vihor pred vratima|A Wind in the Door|Madlen Langl|Madeleine L’Engle|1973|1980||Ljiljana Stanić|Plava ptica 64|
+Vitez sudbine I (Dragulj na čelu, Amajlija ludog boga)|The Jewel in the Skull, The Mad God’s Amulet|Majkl Murkok|Michael Moorcock|1967, 1968|1980|vitezsudbinei|Gordana Vučičević|Plava ptica vanredno izdanje, Čarobna palica 1, 2|The Runestaff Trilogy
+Vitez sudbine II (Mač praskozorja)|The Sword of the Dawn|Majkl Murkok|Michael Moorcock|1968|1980|vitezsudbineii|Gordana Vučičević|Plava ptica vanredno izdanje, Čarobna palica 3|The Runestaff Trilogy
+U davno doba|The Book of the Dun Cow|Volter Vandžerin mladji|Walter Wangerin, Jr|1978|1981||Gordana Velmar-Janković|Plava pica 66|
+Zla kob belog vuka|The Weird of the White Wolf|Majkl Murkok|Michael Moorcock|1977|1981||Dragan Vidić-Vidrag|Plava ptica 69, Elrik 3|The Elric Sequence
+#Tom Sojer u inostranstvu|Tom Sawyer Abroad|Mark Tven|Mark Twain|???|1984||???|Plava ptica 71|
+Južna zvezda|L'Étoile du sud|Žil Vern|Jules Verne|1884|1984||Sonja Perović|Plava ptica 74|
+Drakula I|Dracula|Brem Stoker|Bram Stoker|1897|1984||-?-|Plava ptica 75|
+Drakula II|Dracula|Brem Stoker|Bram Stoker|1897|1984||-?-|Plava ptica 76|
+Tihana iz Erga||Predrag Urošević||1984|1984|||Plava ptica 80|
+Kula koja iščezava|The Vanishing Tower|Majkl Murkok|Michael Moorcock|1972|1986||Dragan Vidić-Vidrag|Plava ptica 87, Elrik 4|The Elric Sequence
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
