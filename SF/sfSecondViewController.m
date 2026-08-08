@@ -73,7 +73,13 @@
 - (void)refreshSearch:(NSString *)text {
     sfAppDelegate *appDelegate = (sfAppDelegate *)[[UIApplication sharedApplication] delegate];
     searchResults = [[appDelegate data] search:text];
-    [searchTableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+    // Reload synchronously. This used to be performSelectorOnMainThread: with
+    // waitUntilDone:NO, but the search bar delegate already runs on the main
+    // thread, so that did not hop threads -- it deferred the reload to a later
+    // runloop pass. In the gap searchResults had already shrunk while the table
+    // still held the old row count, so a layout pass could ask for a row past
+    // the end of the array and crash in cellForRowAtIndexPath.
+    [searchTableView reloadData];
 }
 
 # pragma table view
@@ -83,6 +89,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // Belt and braces alongside the synchronous reload above: results are
+    // replaced wholesale on every keystroke, so if the table ever asks for a row
+    // it cached before a shrink, degrade to a blank cell instead of trapping.
+    if (indexPath.row >= (NSInteger)searchResults.count) {
+        return [sfUtil makeBookCell:indexPath tableView:tableView book:[[sfBook alloc] init]];
+    }
     sfBook *book = searchResults[indexPath.row];
     return [sfUtil makeBookCell:indexPath tableView:tableView book:book];
 }
@@ -97,8 +109,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSIndexPath *indexPath = [self.searchTableView indexPathForSelectedRow];
-    long row = indexPath.row;
-    sfBook *b = searchResults[row];
+    if (indexPath == nil || indexPath.row >= (NSInteger)searchResults.count) { return; }
+    sfBook *b = searchResults[indexPath.row];
     [[segue destinationViewController] setTitle:b.naslov];
     sfDetailVC *detailVC = (sfDetailVC*)[segue destinationViewController];
     detailVC.book = b;
