@@ -15,34 +15,23 @@
 @implementation sfImageVC
 
 @synthesize imageView;
-@synthesize imageView35;
 @synthesize image;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+// Previously this screen carried two image views and switched between them on a
+// screen-height check for the 4-inch iPhone 5. That test is false on every
+// current device, so the cover was always laid out for a 3.5-inch screen. One
+// aspect-fit view that tracks the view bounds handles every size instead.
+- (void)awakeFromNib
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        if (IS_IPHONE_5) {
-            [imageView setHidden:true];
-            [imageView35 setHidden:false];
-        } else {
-            [imageView setHidden:false];
-            [imageView35 setHidden:true];
-        }
-    }
-    return self;
+    [super awakeFromNib];
+    // Give the cover the whole screen; set before the push to animate correctly.
+    self.hidesBottomBarWhenPushed = YES;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    if (IS_IPHONE_5) {
-        [imageView setImage:image];
-    } else {
-        [imageView35 setImage:image];
-    }
+    imageView.image = image;
 }
 
 - (void)didReceiveMemoryWarning

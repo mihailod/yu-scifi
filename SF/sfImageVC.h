@@ -12,7 +12,6 @@
 @interface sfImageVC : UIViewController
 
 @property IBOutlet UIImageView *imageView;
-@property IBOutlet UIImageView *imageView35;
 @property UIImage *image;
 
 @end

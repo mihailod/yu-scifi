@@ -30,6 +30,7 @@
 		1C30C676189E6FD1009B42E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C30C675189E6FD1009B42E2 /* main.m */; };
 		1C30C67A189E6FD1009B42E2 /* sfAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C30C679189E6FD1009B42E2 /* sfAppDelegate.m */; };
 		1C30C67D189E6FD1009B42E2 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C30C67B189E6FD1009B42E2 /* Main_iPhone.storyboard */; };
+		1CAA000000000000000000A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CAA000000000000000000A3 /* LaunchScreen.storyboard */; };
 		1C30C680189E6FD1009B42E2 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C30C67E189E6FD1009B42E2 /* Main_iPad.storyboard */; };
 		1C30C683189E6FD1009B42E2 /* sfFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C30C682189E6FD1009B42E2 /* sfFirstViewController.m */; };
 		1C30C686189E6FD1009B42E2 /* sfSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C30C685189E6FD1009B42E2 /* sfSecondViewController.m */; };
@@ -94,6 +95,7 @@
 		1C30C678189E6FD1009B42E2 /* sfAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sfAppDelegate.h; sourceTree = "<group>"; };
 		1C30C679189E6FD1009B42E2 /* sfAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sfAppDelegate.m; sourceTree = "<group>"; };
 		1C30C67C189E6FD1009B42E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		1CAA000000000000000000A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C30C67F189E6FD1009B42E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		1C30C681189E6FD1009B42E2 /* sfFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sfFirstViewController.h; sourceTree = "<group>"; };
 		1C30C682189E6FD1009B42E2 /* sfFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sfFirstViewController.m; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				1C30C67B189E6FD1009B42E2 /* Main_iPhone.storyboard */,
+				1CAA000000000000000000A3 /* LaunchScreen.storyboard */,
 				1C30C67E189E6FD1009B42E2 /* Main_iPad.storyboard */,
 				1C306EDD18A3AAF0005B729D /* sfEdition.h */,
 				1C306EDE18A3AAF0005B729D /* sfEdition.m */,
@@ -348,6 +351,7 @@
 				1C1C604118B9E08300F3F3B8 /* raspustdb.txt in Resources */,
 				1C306EE918A66F88005B729D /* stilosdb.txt in Resources */,
 				1C30C67D189E6FD1009B42E2 /* Main_iPhone.storyboard in Resources */,
+				1CAA000000000000000000A1 /* LaunchScreen.storyboard in Resources */,
 				1C306EEF18A7C179005B729D /* teorijadb.txt in Resources */,
 				1CD12EE518B14FFD004E09F1 /* x100db.txt in Resources */,
 				1C1C603A18B266D500F3F3B8 /* Images.xcassets in Resources */,
@@ -428,6 +432,14 @@
 				1C30C67C189E6FD1009B42E2 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		1CAA000000000000000000A3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CAA000000000000000000A2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		1C30C67E189E6FD1009B42E2 /* Main_iPad.storyboard */ = {
@@ -527,7 +539,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -544,7 +555,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
