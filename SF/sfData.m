@@ -25,13 +25,18 @@
         e.books = [self readBooksForDatabase:e.dbName forEdition:e.name];
         totalNumberOfItems += [e.books count];
     }
+    // All six re-derived against the live sites on 2026-08-07. The 2014 paths are
+    // dead: Limundo moved pretragaLimundo.php -> /pretraga, Njuskalo and Bolha both
+    // moved to /search/?keywords=, and Kupindo kept pretraga.php but retired the
+    // Grupa=405 category id (which 404s). Category filtering is gone on all four
+    // marketplaces; title searches come back clean without it.
     webSearchSyntax = [NSArray arrayWithObjects:
-                       @"http://www.google.com/search?q=",
-                       @"http://en.m.wikipedia.org/wiki/Special:Search?search=",
-                       @"http://www.limundo.com/pretragaLimundo.php?cmbNapPretKategorijaLimundo=130&txtPretraga=",
-                       @"http://www.kupindo.com/pretraga.php?Grupa=405&Pretraga=",
-                       @"http://www.njuskalo.hr/index.php?ctl=search_ads&keywords=",
-                       @"http://www.bolha.com/iskanje?category=knjige-revije-stripi&q=",
+                       @"https://www.google.com/search?q=",
+                       @"https://en.m.wikipedia.org/wiki/Special:Search?search=",
+                       @"https://www.limundo.com/pretraga?txtPretraga=",
+                       @"https://www.kupindo.com/pretraga.php?bSearchBox=1&Pretraga=",
+                       @"https://www.njuskalo.hr/search/?keywords=",
+                       @"https://www.bolha.com/search/?keywords=",
                        nil];
     
     return self;

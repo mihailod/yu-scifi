@@ -7,6 +7,7 @@
 //
 
 #import "sfDetailVC.h"
+#import <SafariServices/SafariServices.h>
 
 @interface sfDetailVC ()
 
@@ -46,13 +47,20 @@
     }
 }
 
+// Presented with SFSafariViewController rather than an in-app web view. It runs
+// out-of-process on the real Safari engine, so it sends Safari's user agent and
+// shares Safari's cookie jar -- the Balkan marketplaces sit behind Cloudflare,
+// which bot-scores a legacy UIWebView UA and throws up a "verify you are human"
+// interstitial. It also sidesteps ATS and gives us Reader/Share for free.
 - (IBAction) followWebLink:(id)sender;
 {
     sfAppDelegate *appDelegate = (sfAppDelegate *)[[UIApplication sharedApplication] delegate];
     NSString *urlString = [sfUtil makeWebLink:(int)[sender tag] book:book webSearchSyntax:[[appDelegate data] webSearchSyntax]];
-    sfWebVC *w =[self.storyboard instantiateViewControllerWithIdentifier:@"webVC"];
-    w.urlString = urlString;   
-    [self.navigationController pushViewController:w animated:YES];
+    NSURL *url = [NSURL URLWithString:urlString];
+    if (url == nil) { return; }
+    SFSafariViewController *sfvc = [[SFSafariViewController alloc] initWithURL:url];
+    sfvc.modalPresentationStyle = UIModalPresentationPageSheet;
+    [self presentViewController:sfvc animated:YES completion:nil];
 }
 
 - (NSString *)formatDetailText

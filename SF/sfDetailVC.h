@@ -10,7 +10,6 @@
 #import "sfBook.h"
 #import "sfAppDelegate.h"
 #import "sfUtil.h"
-#import "sfWebVC.h"
 #import "sfImageVC.h"
 
 @interface sfDetailVC : UIViewController

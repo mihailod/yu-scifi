@@ -13,7 +13,6 @@
 
 #import "sfUtil.h"
 #import "sfData.h"
-#import "sfWebVC.h"
 
 @interface sfInfoVC : UIViewController <MFMailComposeViewControllerDelegate>
 

@@ -157,57 +157,6 @@
             </objects>
             <point key="canvasLocation" x="1508" y="-138"/>
         </scene>
-        <!--Sf WebVC-->
-        <scene sceneID="El3-Q7-uRp">
-            <objects>
-                <viewController storyboardIdentifier="webVC" id="DmB-sS-Wvk" customClass="sfWebVC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="42R-Rs-Vj7"/>
-                        <viewControllerLayoutGuide type="bottom" id="JMl-AP-6B0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4lL-b4-GRN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hBV-hH-nFr">
-                                <rect key="frame" x="0.0" y="35" width="320" height="533"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIN-Iy-Pmx">
-                                <rect key="frame" x="20" y="70" width="32" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="back:" destination="DmB-sS-Wvk" eventType="touchUpInside" id="KRd-ZI-TA6"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RN-n0-Ggv">
-                                <rect key="frame" x="268" y="70" width="32" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="forward">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="back:" destination="DmB-sS-Wvk" eventType="touchUpInside" id="SsN-EJ-6Mf"/>
-                                    <action selector="forward:" destination="DmB-sS-Wvk" eventType="touchUpInside" id="HL2-sV-E0O"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="back" destination="fIN-Iy-Pmx" id="Mx7-xa-gyH"/>
-                        <outlet property="forward" destination="9RN-n0-Ggv" id="ghL-YB-blI"/>
-                        <outlet property="webView" destination="hBV-hH-nFr" id="LOX-29-wuY"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DWa-IO-6KH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2329" y="218"/>
-        </scene>
         <!--Sf DetailVC-->
         <scene sceneID="7OQ-JN-wWG">
             <objects>
@@ -383,19 +332,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Pretraga" id="1tB-pT-F2p"/>
                     <connections>
-                        <outlet property="searchDisplayController" destination="0Lh-Mg-rxO" id="N1s-zT-BKM"/>
                         <outlet property="searchTableView" destination="r83-tk-O3C" id="hpS-pP-E6b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="0Lh-Mg-rxO">
-                    <connections>
-                        <outlet property="delegate" destination="QUy-BD-bpt" id="KJt-Nb-j7q"/>
-                        <outlet property="searchContentsController" destination="QUy-BD-bpt" id="rj4-5x-XxF"/>
-                        <outlet property="searchResultsDataSource" destination="QUy-BD-bpt" id="ya5-6z-9fy"/>
-                        <outlet property="searchResultsDelegate" destination="QUy-BD-bpt" id="dH6-RL-Azs"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1087" y="532"/>
         </scene>
