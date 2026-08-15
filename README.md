@@ -12,7 +12,7 @@
 </tr>
 </table>
 
-**August 2028 Update: Finally, now with help of Claude I put it back on the App Store.**
+**August 2026 Update: Finally, now with help of Claude I put it back on the App Store.**
 
 <a href="https://apps.apple.com/app/id826648548" float="left">
   <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1276560000&h=7e7b68fad19738b5649a1bfb78ff46e9" alt="Download on the App Store">
