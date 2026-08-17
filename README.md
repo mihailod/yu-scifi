@@ -5,18 +5,21 @@
   </a>
 </th>
 <th>
-  This is YU SciFi app I wrote back in 2014<br>
-  and had on Apple App Store until 2021<br>
-  when it was removed due to obsolescence.<br>
-</th>
-</tr>
-</table>
+  This is the YU SciFi app I wrote back in 2014<br>
+  and was on Apple App Store until 2021<br>
+  when it was removed due to obsolescence.<br><br>
 
-**August 2026 Update: Finally, now with help of Claude I put it back on the App Store.**
+  August 11. 2026<br>
+  The V1.1 is back on App Store!
 
 <a href="https://apps.apple.com/app/id826648548" float="left">
   <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1276560000&h=7e7b68fad19738b5649a1bfb78ff46e9" alt="Download on the App Store">
 </a>
+
+
+</th>
+</tr>
+</table>
 
 ---
 
